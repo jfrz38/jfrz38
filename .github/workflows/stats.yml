@@ -19,14 +19,14 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&theme=default&rank_icon=github#gh-light-mode-only
+          options: username=${{ github.repository_owner }}&show_icons=true&theme=default&rank_icon=github
           path: profile/stats-light.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Generate stats card dark mode
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&show_icons=true&theme=dark&rank_icon=github#gh-dark-mode-only
+          options: username=${{ github.repository_owner }}&show_icons=true&show_icons=true&theme=dark&rank_icon=github
           path: profile/stats-dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}        
 
@@ -34,14 +34,14 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&theme=default&layout=compact&hide=javascript,html,css,shaderlab,scss,swift,objective-c,vue,hlsl&exclude_repo=PoolGameVR#gh-light-mode-only
+          options: username=${{ github.repository_owner }}&theme=default&layout=compact&hide=javascript,html,css,shaderlab,scss,swift,objective-c,vue,hlsl&exclude_repo=PoolGameVR
           path: profile/top-langs-light.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Generate top languages card dark mode
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&theme=dark&layout=compact&hide=javascript,html,css,shaderlab,scss,swift,objective-c,vue,hlsl&exclude_repo=PoolGameVR#gh-dark-mode-only
+          options: username=${{ github.repository_owner }}&theme=dark&layout=compact&hide=javascript,html,css,shaderlab,scss,swift,objective-c,vue,hlsl&exclude_repo=PoolGameVR
           path: profile/top-langs-dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
