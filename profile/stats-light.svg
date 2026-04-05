@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Jos&#233; F. Ruiz's GitHub Stats, Rank: B+</title>
-        <desc id="descId">Total Stars Earned: 2, Total Commits  (last year) : 482, Total PRs: 103, Total Issues: 47, Contributed to (last year): 0</desc>
+        <desc id="descId">Total Stars Earned: 2, Total Commits  (last year) : 559, Total PRs: 116, Total Issues: 50, Contributed to (last year): 0</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 124.60975754809786;
+        stroke-dashoffset: 119.22731443404614;
       }
     }
   
@@ -177,7 +177,7 @@
         x="219.01"
         y="12.5"
         data-testid="commits"
-      >482</text>
+      >559</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
@@ -192,7 +192,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs"
-      >103</text>
+      >116</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
@@ -207,7 +207,7 @@
         x="219.01"
         y="12.5"
         data-testid="issues"
-      >47</text>
+      >50</text>
     </g>
   </g><g transform="translate(0, 100)">
     <g class="stagger" style="animation-delay: 1050ms" transform="translate(25, 0)">
