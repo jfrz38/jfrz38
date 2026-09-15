@@ -1,0 +1,51 @@
+name: Update package metrics
+
+on:
+  schedule:
+    - cron: "15 0 * * 0"
+  workflow_dispatch:
+
+concurrency:
+  group: profile-updates-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.13"
+
+      - name: Test generator
+        run: python -m unittest discover -s .github/scripts/tests -v
+
+      - name: Generate package metrics
+        run: python .github/scripts/update_package_metrics.py --date "$(date -u +%F)"
+
+      - name: Commit package metrics
+        shell: bash
+        run: |
+          files=(
+            profile/package-metrics.json
+            profile/distribution-light.svg
+            profile/distribution-dark.svg
+            profile/registry-activity-light.svg
+            profile/registry-activity-dark.svg
+          )
+          if [[ -z "$(git status --porcelain -- "${files[@]}")" ]]; then
+            echo "Package metrics are already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "${files[@]}"
+          git commit -m "Update package metrics"
+          git push
