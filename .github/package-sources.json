@@ -1,0 +1,100 @@
+{
+  "npm_maintainer": "jfrz38",
+  "crates_io_owner_id": 439611,
+  "history_days": 400,
+  "sources": [
+    {
+      "id": "cah-cli",
+      "product": "clean-architecture-highlighter",
+      "label": "CLI",
+      "metrics_label": "CAH CLI",
+      "type": "npm",
+      "package": "@jfrz38/clean-architecture-highlighter-cli"
+    },
+    {
+      "id": "cah-eslint",
+      "product": "clean-architecture-highlighter",
+      "label": "ESLint",
+      "metrics_label": "CAH ESLint",
+      "type": "npm",
+      "package": "@jfrz38/eslint-plugin-clean-architecture-highlighter"
+    },
+    {
+      "id": "cah-vscode",
+      "product": "clean-architecture-highlighter",
+      "label": "VS Code",
+      "type": "vscode",
+      "extension": "jfrz38.clean-architecture-highlighter"
+    },
+    {
+      "id": "pid-core",
+      "product": "pid-rate-limiter",
+      "label": "core",
+      "metrics_label": "PID core",
+      "type": "npm",
+      "package": "@jfrz38/pid-controller-core"
+    },
+    {
+      "id": "pid-express",
+      "product": "pid-rate-limiter",
+      "label": "Express",
+      "metrics_label": "PID Express",
+      "type": "npm",
+      "package": "@jfrz38/pid-controller-express"
+    },
+    {
+      "id": "pid-nestjs",
+      "product": "pid-rate-limiter",
+      "label": "NestJS",
+      "metrics_label": "PID NestJS",
+      "type": "npm",
+      "package": "@jfrz38/pid-controller-nestjs"
+    },
+    {
+      "id": "nestjs-openapi-wrapper",
+      "product": "nestjs-openapi-wrapper",
+      "label": "npm",
+      "metrics_label": "OpenAPI wrapper",
+      "type": "npm",
+      "package": "@jfrz38/nestjs-open-api-generator-wrapper"
+    },
+    {
+      "id": "opencode-copy-last",
+      "product": "opencode-copy-last",
+      "label": "npm",
+      "metrics_label": "Copy Last",
+      "type": "npm",
+      "package": "@jfrz38/opencode-copy-last"
+    },
+    {
+      "id": "opencode-wololo-notifications",
+      "product": "opencode-wololo-notifications",
+      "label": "npm",
+      "metrics_label": "Wololo Notifications",
+      "type": "npm",
+      "package": "@jfrz38/opencode-wololo-notifications"
+    },
+    {
+      "id": "cocommit",
+      "product": "cocommit",
+      "label": "crates.io",
+      "type": "crates_io",
+      "crate": "cocommit"
+    },
+    {
+      "id": "worldhunt",
+      "product": "worldhunt",
+      "label": "crates.io",
+      "type": "crates_io",
+      "crate": "worldhunt"
+    },
+    {
+      "id": "mockguard",
+      "product": "mockguard",
+      "label": "Maven Central",
+      "type": "maven",
+      "group": "io.github.jfrz38",
+      "artifact": "mockguard"
+    }
+  ]
+}
