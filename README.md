@@ -6,7 +6,7 @@ I build things I use, or wish existed, and keep the repositories open in case th
 
 I work with coding agents as part of my day-to-day development workflow, mainly through OpenCode, and I build tools around that workflow too.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/josef-ruiz/) [![Email](https://img.shields.io/badge/Email-FFAD00?style=flat-square)](mailto:jose.ruiz@hexacode.es)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/josef-ruiz/) [![Email](https://img.shields.io/badge/Email-FFAD00?style=flat-square)](mailto:jose.ruiz@hexacode.es) [![CV](https://img.shields.io/badge/CV-555555?style=flat-square)](https://jfrz38.github.io/cv)
 
 - 🏜️ Based in **Almería, Spain**
 - 🚀 Co-founder at [Hexacode](https://hexacode.es)
