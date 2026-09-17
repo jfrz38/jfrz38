@@ -51,6 +51,14 @@
       "package": "@jfrz38/pid-controller-nestjs"
     },
     {
+      "id": "nestjs-cache-proxy",
+      "product": "nestjs-cache-proxy",
+      "label": "npm",
+      "metrics_label": "NestJS Cache Proxy",
+      "type": "npm",
+      "package": "@jfrz38/nestjs-cache-proxy"
+    },
+    {
       "id": "nestjs-openapi-wrapper",
       "product": "nestjs-openapi-wrapper",
       "label": "npm",

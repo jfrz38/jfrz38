@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-13",
+  "as_of": "2026-09-15",
   "channels": {
     "maven": {
       "artifact_count": 1
@@ -16,23 +16,25 @@
       "2026-09-04": 1,
       "2026-09-07": 9,
       "2026-09-08": 4,
-      "2026-09-10": 1
+      "2026-09-10": 1,
+      "2026-09-15": 12
     },
-    "downloads_30d": 24,
-    "downloads_total": 24,
-    "downloads_ytd": 24,
+    "downloads_30d": 36,
+    "downloads_total": 38,
+    "downloads_ytd": 36,
     "owner_id": 439611,
     "packages": {
       "cocommit": {
         "daily": {
           "2026-09-07": 8,
           "2026-09-08": 3,
-          "2026-09-10": 1
+          "2026-09-10": 1,
+          "2026-09-15": 12
         },
-        "downloads_total": 12,
+        "downloads_total": 26,
         "label": "crates.io",
         "product": "cocommit",
-        "version": "0.1.0"
+        "version": "0.2.0"
       },
       "worldhunt": {
         "daily": {
@@ -51,8 +53,6 @@
   },
   "npm": {
     "daily_totals": {
-      "2025-08-10": 0,
-      "2025-08-11": 0,
       "2025-08-12": 0,
       "2025-08-13": 0,
       "2025-08-14": 0,
@@ -450,18 +450,18 @@
       "2026-09-10": 6,
       "2026-09-11": 22,
       "2026-09-12": 22,
-      "2026-09-13": 7
+      "2026-09-13": 7,
+      "2026-09-14": 7,
+      "2026-09-15": 0
     },
-    "downloads_30d": 798,
-    "downloads_previous_30d": 355,
-    "downloads_ytd": 5473,
+    "downloads_30d": 765,
+    "downloads_previous_30d": 378,
+    "downloads_ytd": 5480,
     "maintainer": "jfrz38",
-    "package_count": 8,
+    "package_count": 9,
     "packages": {
       "@jfrz38/clean-architecture-highlighter-cli": {
         "daily": {
-          "2025-08-10": 0,
-          "2025-08-11": 0,
           "2025-08-12": 0,
           "2025-08-13": 0,
           "2025-08-14": 0,
@@ -859,7 +859,9 @@
           "2026-09-10": 0,
           "2026-09-11": 2,
           "2026-09-12": 0,
-          "2026-09-13": 1
+          "2026-09-13": 1,
+          "2026-09-14": 0,
+          "2026-09-15": 0
         },
         "label": "CLI",
         "product": "clean-architecture-highlighter",
@@ -867,8 +869,6 @@
       },
       "@jfrz38/eslint-plugin-clean-architecture-highlighter": {
         "daily": {
-          "2025-08-10": 0,
-          "2025-08-11": 0,
           "2025-08-12": 0,
           "2025-08-13": 0,
           "2025-08-14": 0,
@@ -1266,16 +1266,22 @@
           "2026-09-10": 0,
           "2026-09-11": 0,
           "2026-09-12": 0,
-          "2026-09-13": 0
+          "2026-09-13": 0,
+          "2026-09-14": 0,
+          "2026-09-15": 0
         },
         "label": "ESLint",
         "product": "clean-architecture-highlighter",
         "version": "0.1.1"
       },
+      "@jfrz38/nestjs-cache-proxy": {
+        "daily": {},
+        "label": "npm",
+        "product": "nestjs-cache-proxy",
+        "version": "0.1.1"
+      },
       "@jfrz38/nestjs-open-api-generator-wrapper": {
         "daily": {
-          "2025-08-10": 0,
-          "2025-08-11": 0,
           "2025-08-12": 0,
           "2025-08-13": 0,
           "2025-08-14": 0,
@@ -1669,7 +1675,9 @@
           "2026-09-10": 2,
           "2026-09-11": 3,
           "2026-09-12": 18,
-          "2026-09-13": 5
+          "2026-09-13": 5,
+          "2026-09-14": 1,
+          "2026-09-15": 0
         },
         "label": "npm",
         "product": "nestjs-openapi-wrapper",
@@ -1677,8 +1685,6 @@
       },
       "@jfrz38/opencode-copy-last": {
         "daily": {
-          "2025-08-10": 0,
-          "2025-08-11": 0,
           "2025-08-12": 0,
           "2025-08-13": 0,
           "2025-08-14": 0,
@@ -2080,7 +2086,7 @@
         },
         "label": "npm",
         "product": "opencode-copy-last",
-        "version": "0.1.1"
+        "version": "0.1.2"
       },
       "@jfrz38/opencode-wololo-notifications": {
         "daily": {
@@ -2105,7 +2111,9 @@
           "2026-09-10": 4,
           "2026-09-11": 7,
           "2026-09-12": 0,
-          "2026-09-13": 0
+          "2026-09-13": 0,
+          "2026-09-14": 6,
+          "2026-09-15": 0
         },
         "label": "npm",
         "product": "opencode-wololo-notifications",
@@ -2113,8 +2121,6 @@
       },
       "@jfrz38/pid-controller-core": {
         "daily": {
-          "2025-08-10": 0,
-          "2025-08-11": 0,
           "2025-08-12": 0,
           "2025-08-13": 0,
           "2025-08-14": 0,
@@ -2487,7 +2493,8 @@
           "2026-08-16": 2,
           "2026-08-17": 0,
           "2026-08-18": 0,
-          "2026-08-19": 2
+          "2026-08-19": 2,
+          "2026-09-15": 0
         },
         "label": "core",
         "product": "pid-rate-limiter",
@@ -2495,8 +2502,6 @@
       },
       "@jfrz38/pid-controller-express": {
         "daily": {
-          "2025-08-10": 0,
-          "2025-08-11": 0,
           "2025-08-12": 0,
           "2025-08-13": 0,
           "2025-08-14": 0,
@@ -2869,7 +2874,8 @@
           "2026-08-16": 1,
           "2026-08-17": 0,
           "2026-08-18": 0,
-          "2026-08-19": 2
+          "2026-08-19": 2,
+          "2026-09-15": 0
         },
         "label": "Express",
         "product": "pid-rate-limiter",
@@ -2877,8 +2883,6 @@
       },
       "@jfrz38/pid-controller-nestjs": {
         "daily": {
-          "2025-08-10": 0,
-          "2025-08-11": 0,
           "2025-08-12": 0,
           "2025-08-13": 0,
           "2025-08-14": 0,
@@ -3251,7 +3255,8 @@
           "2026-08-16": 1,
           "2026-08-17": 0,
           "2026-08-18": 1,
-          "2026-08-19": 2
+          "2026-08-19": 2,
+          "2026-09-15": 0
         },
         "label": "NestJS",
         "product": "pid-rate-limiter",
@@ -3260,22 +3265,22 @@
     },
     "top_packages_30d": [
       {
-        "downloads": 312,
+        "downloads": 318,
         "label": "Wololo Notifications",
         "package": "@jfrz38/opencode-wololo-notifications"
       },
       {
-        "downloads": 295,
+        "downloads": 283,
         "label": "OpenAPI wrapper",
         "package": "@jfrz38/nestjs-open-api-generator-wrapper"
       },
       {
-        "downloads": 71,
+        "downloads": 68,
         "label": "CAH ESLint",
         "package": "@jfrz38/eslint-plugin-clean-architecture-highlighter"
       }
     ],
     "unconfigured_packages": []
   },
-  "refreshed_on": "2026-09-15"
+  "refreshed_on": "2026-09-17"
 }

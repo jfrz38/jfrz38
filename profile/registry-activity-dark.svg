@@ -14,7 +14,7 @@
     <path d="M1.763 0C.786 0 0 .786 0 1.763v20.474C0 23.214.786 24 1.763 24h20.474c.977 0 1.763-.786 1.763-1.763V1.763C24 .786 23.214 0 22.237 0zM5.13 5.323l13.837.019-.009 13.836h-3.464l.01-10.382h-3.456L12.04 19.17H5.113z"/>
   </g>
   <text x="54" y="91" class="label">npm</text>
-  <text x="28" y="124" class="value">798</text>
+  <text x="28" y="124" class="value">765</text>
   <text x="28" y="145" class="small">last 30 days</text>
   <line x1="252" y1="142" x2="742" y2="142" class="grid"/>
   <rect x="252" y="141.4" width="28" height="0.6" rx="3" fill="#f05b5a"/>
@@ -28,14 +28,14 @@
   <rect x="588" y="80.0" width="28" height="62.0" rx="3" fill="#f05b5a"/>
   <rect x="630" y="123.0" width="28" height="19.0" rx="3" fill="#f05b5a"/>
   <rect x="672" y="112.4" width="28" height="29.6" rx="3" fill="#f05b5a"/>
-  <rect x="714" y="136.9" width="28" height="5.1" rx="3" fill="#f05b5a"/>
+  <rect x="714" y="136.6" width="28" height="5.4" rx="3" fill="#f05b5a"/>
   <g transform="translate(28 173) scale(.75)" fill="none" stroke="#f0883e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
     <path d="m21 8-9-5-9 5 9 5 9-5Z"/>
     <path d="m3 8 9 5v9"/>
     <path d="m21 8-9 5"/>
   </g>
   <text x="54" y="190" class="label">crates.io</text>
-  <text x="28" y="223" class="value">24</text>
+  <text x="28" y="223" class="value">36</text>
   <text x="28" y="244" class="small">last 30 days</text>
   <line x1="252" y1="241" x2="742" y2="241" class="grid"/>
   <rect x="252" y="241.0" width="28" height="0.0" rx="3" fill="#f0883e"/>
@@ -55,5 +55,5 @@
   <text x="518" y="276" text-anchor="middle" class="small">Apr</text>
   <text x="644" y="276" text-anchor="middle" class="small">Jul</text>
   <text x="728" y="276" text-anchor="middle" class="small">Sep</text>
-  <text x="28" y="304" class="small">Monthly downloads · independent scale per registry · through 2026-09-13</text>
+  <text x="28" y="304" class="small">Monthly downloads · independent scale per registry · through 2026-09-15</text>
 </svg>

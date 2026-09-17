@@ -26,6 +26,7 @@ Also working with Python, GitHub Actions, Prometheus, Grafana, Terraform, Kubern
 ### Backend libraries
 
 - **[PID Rate Limiter](https://github.com/jfrz38/rate-limit-pid-controller)** · `TypeScript` `Express` `NestJS` · Adaptive rate limiting driven by a PID feedback loop, inspired by [Uber's Cinnamon](https://www.uber.com/en-ES/blog/cinnamon-using-century-old-tech-to-build-a-mean-load-shedder/). [core](https://www.npmjs.com/package/@jfrz38/pid-controller-core) · [Express](https://www.npmjs.com/package/@jfrz38/pid-controller-express) · [NestJS](https://www.npmjs.com/package/@jfrz38/pid-controller-nestjs)
+- **[NestJS Cache Proxy](https://github.com/jfrz38/nestjs-cache-proxy)** · `TypeScript` `NestJS` `cache-manager` · Transparent, declarative caching for NestJS providers without changing how consumers use them. [npm](https://www.npmjs.com/package/@jfrz38/nestjs-cache-proxy)
 - **[mockguard](https://github.com/jfrz38/mockguard)** · `Kotlin` `JUnit 5` `Mockito` · Strict mock validation that detects interactions left unverified. [Maven Central](https://central.sonatype.com/artifact/io.github.jfrz38/mockguard)
 - **[NestJS OpenAPI Wrapper](https://github.com/jfrz38/nestjs-openapi-generator-wrapper)** · `TypeScript` `NestJS` `OpenAPI` · Opinionated NestJS structures and templates on top of OpenAPI Generator. [npm](https://www.npmjs.com/package/@jfrz38/nestjs-open-api-generator-wrapper)
 
