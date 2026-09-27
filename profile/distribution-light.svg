@@ -10,10 +10,10 @@
   </style>
   <rect x="1" y="1" width="788" height="328" rx="12" fill="#ffffff" stroke="#d0d7de"/>
   <text x="28" y="42" class="title">Open-source footprint</text>
-  <text x="28" y="98" class="value">5.8k</text>
+  <text x="28" y="98" class="value">6.1k</text>
   <text x="28" y="124" class="small">npm downloads in 2026</text>
   <line x1="278" y1="68" x2="278" y2="142" class="grid"/>
-  <text x="308" y="98" class="value">38</text>
+  <text x="308" y="98" class="value">43</text>
   <text x="308" y="124" class="small">crates.io downloads in 2026</text>
   <line x1="528" y1="68" x2="528" y2="142" class="grid"/>
   <text x="558" y="98" class="value">16</text>
@@ -29,5 +29,5 @@
   <text x="555" y="210" class="value">1</text>
   <text x="555" y="236" class="small">Maven Central artifacts</text>
   <text x="28" y="270" class="small">Registry downloads are requests, not unique users.</text>
-  <text x="28" y="301" class="small">Data through 2026-09-18</text>
+  <text x="28" y="301" class="small">Data through 2026-09-25</text>
 </svg>
