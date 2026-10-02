@@ -47,6 +47,7 @@ Also working with Python, GitHub Actions, Prometheus, Grafana, Terraform, Kubern
 - **[smart-world-map](https://github.com/jfrz38/smart-world-map)** · `Python` `Rust` `Arduino` · A physical LED map following the ISS, nearby flights and earthquakes.
 - **[worldhunt](https://github.com/jfrz38/worldhunt)** · `Rust` `ratatui` · An offline hot-and-cold country guessing game for the terminal. [crates.io](https://crates.io/crates/worldhunt)
 - **[wololang](https://github.com/jfrz38/wololang)** · `TypeScript` `esolang` · An esoteric language built from Age of Empires II taunts. Yes, `wololo` is valid syntax.
+- **[bash-http-lab](https://github.com/jfrz38/bash-http-lab)** · `Bash` `HTTP` `OpenAPI` · A small HTTP/1.1 server built in plain Bash to explore routing, validation, middleware and persistence behind web frameworks.
 - **[rocket-api-test](https://github.com/jfrz38/rocket-api-test)** · `Rust` `Rocket` · A deliberately small API exploring layered design, dependency inversion and value objects.
 
 [Browse all repositories →](https://github.com/jfrz38?tab=repositories)
