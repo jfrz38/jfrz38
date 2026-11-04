@@ -30,10 +30,15 @@ Also working with Python, GitHub Actions, Prometheus, Grafana, Terraform, Kubern
 - **[mockguard](https://github.com/jfrz38/mockguard)** · `Kotlin` `JUnit 5` `Mockito` · Strict mock validation that detects interactions left unverified. [Maven Central](https://central.sonatype.com/artifact/io.github.jfrz38/mockguard)
 - **[NestJS OpenAPI Wrapper](https://github.com/jfrz38/nestjs-openapi-generator-wrapper)** · `TypeScript` `NestJS` `OpenAPI` · Opinionated NestJS structures and templates on top of OpenAPI Generator. [npm](https://www.npmjs.com/package/@jfrz38/nestjs-open-api-generator-wrapper)
 
+### Systems & cloud
+
+- **[EdgeFlags](https://github.com/jfrz38/edgeflags)** · `TypeScript` `Cloudflare Workers` `Terraform` · An experimental edge-native feature flag service with authentication, scope-based authorization, KV storage, infrastructure as code and automated delivery.
+
 ### Developer tooling & automation
 
 - **[Clean Architecture Highlighter](https://github.com/jfrz38/clean-architecture-highlighter)** · `TypeScript` `VS Code` `ESLint` · Architecture dependency rules in the editor, linter and command line. [CLI](https://www.npmjs.com/package/@jfrz38/clean-architecture-highlighter-cli) · [ESLint](https://www.npmjs.com/package/@jfrz38/eslint-plugin-clean-architecture-highlighter) · [VS Code](https://marketplace.visualstudio.com/items?itemName=jfrz38.clean-architecture-highlighter)
 - **[check-version-change](https://github.com/jfrz38/check-version-change)** · `TypeScript` `GitHub Actions` · Detects version changes across npm, PyPI, Maven, crates.io, Go modules and Git refs.
+- **[verify-release-tag](https://github.com/jfrz38/verify-release-tag)** · `TypeScript` `GitHub Actions` `Git` · Read-only validation that a release tag matches a JSON manifest version and, optionally, the expected commit. [Marketplace](https://github.com/marketplace/actions/verify-release-tag)
 - **[auto-version-bump-action](https://github.com/jfrz38/auto-version-bump-action)** · `TypeScript` `GitHub Actions` · Reusable SemVer bumps for Gradle, npm and custom project files.
 - **[cocommit](https://github.com/jfrz38/cocommit)** · `Rust` `ratatui` `Git` · A keyboard-driven TUI for building Conventional Commits. [crates.io](https://crates.io/crates/cocommit)
 
