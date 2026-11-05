@@ -25,6 +25,7 @@ Also working with Python, GitHub Actions, Prometheus, Grafana, Terraform, Kubern
 
 ### Backend libraries
 
+- **[Adaptive Admission Controller](https://github.com/jfrz38/adaptive-admission-controller)** · `Rust` `WebAssembly` `PID` · The Rust evolution of PID Rate Limiter: priority-aware load shedding, adaptive concurrency and PID-controlled admission in a deterministic state machine. [crates.io](https://crates.io/crates/adaptive-admission-core) · [docs.rs](https://docs.rs/adaptive-admission-core)
 - **[PID Rate Limiter](https://github.com/jfrz38/rate-limit-pid-controller)** · `TypeScript` `Express` `NestJS` · Adaptive rate limiting driven by a PID feedback loop, inspired by [Uber's Cinnamon](https://www.uber.com/en-ES/blog/cinnamon-using-century-old-tech-to-build-a-mean-load-shedder/). [core](https://www.npmjs.com/package/@jfrz38/pid-controller-core) · [Express](https://www.npmjs.com/package/@jfrz38/pid-controller-express) · [NestJS](https://www.npmjs.com/package/@jfrz38/pid-controller-nestjs)
 - **[NestJS Cache Proxy](https://github.com/jfrz38/nestjs-cache-proxy)** · `TypeScript` `NestJS` `cache-manager` · Transparent, declarative caching for NestJS providers without changing how consumers use them. [npm](https://www.npmjs.com/package/@jfrz38/nestjs-cache-proxy)
 - **[mockguard](https://github.com/jfrz38/mockguard)** · `Kotlin` `JUnit 5` `Mockito` · Strict mock validation that detects interactions left unverified. [Maven Central](https://central.sonatype.com/artifact/io.github.jfrz38/mockguard)
@@ -37,9 +38,9 @@ Also working with Python, GitHub Actions, Prometheus, Grafana, Terraform, Kubern
 ### Developer tooling & automation
 
 - **[Clean Architecture Highlighter](https://github.com/jfrz38/clean-architecture-highlighter)** · `TypeScript` `VS Code` `ESLint` · Architecture dependency rules in the editor, linter and command line. [CLI](https://www.npmjs.com/package/@jfrz38/clean-architecture-highlighter-cli) · [ESLint](https://www.npmjs.com/package/@jfrz38/eslint-plugin-clean-architecture-highlighter) · [VS Code](https://marketplace.visualstudio.com/items?itemName=jfrz38.clean-architecture-highlighter)
-- **[check-version-change](https://github.com/jfrz38/check-version-change)** · `TypeScript` `GitHub Actions` · Detects version changes across npm, PyPI, Maven, crates.io, Go modules and Git refs.
+- **[check-version-change](https://github.com/jfrz38/check-version-change)** · `TypeScript` `GitHub Actions` · Detects version changes across npm, PyPI, Maven, crates.io, Go modules and Git refs. [Marketplace](https://github.com/marketplace/actions/check-version-change)
 - **[verify-release-tag](https://github.com/jfrz38/verify-release-tag)** · `TypeScript` `GitHub Actions` `Git` · Read-only validation that a release tag matches a JSON manifest version and, optionally, the expected commit. [Marketplace](https://github.com/marketplace/actions/verify-release-tag)
-- **[auto-version-bump-action](https://github.com/jfrz38/auto-version-bump-action)** · `TypeScript` `GitHub Actions` · Reusable SemVer bumps for Gradle, npm and custom project files.
+- **[auto-version-bump-action](https://github.com/jfrz38/auto-version-bump-action)** · `TypeScript` `GitHub Actions` · Reusable SemVer bumps for Gradle, npm and custom project files. [Marketplace](https://github.com/marketplace/actions/auto-version-bump-action)
 - **[cocommit](https://github.com/jfrz38/cocommit)** · `Rust` `ratatui` `Git` · A keyboard-driven TUI for building Conventional Commits. [crates.io](https://crates.io/crates/cocommit)
 
 ### OpenCode workflow

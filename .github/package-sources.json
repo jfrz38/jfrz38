@@ -97,6 +97,14 @@
       "crate": "worldhunt"
     },
     {
+      "id": "adaptive-admission-core",
+      "product": "adaptive-admission-controller",
+      "label": "crates.io",
+      "metrics_label": "Admission core",
+      "type": "crates_io",
+      "crate": "adaptive-admission-core"
+    },
+    {
       "id": "mockguard",
       "product": "mockguard",
       "label": "Maven Central",

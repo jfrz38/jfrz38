@@ -10,10 +10,10 @@
   </style>
   <rect x="1" y="1" width="788" height="328" rx="12" fill="#0d1117" stroke="#30363d"/>
   <text x="28" y="42" class="title">Open-source footprint</text>
-  <text x="28" y="98" class="value">7.3k</text>
+  <text x="28" y="98" class="value">7.5k</text>
   <text x="28" y="124" class="small">npm downloads in 2026</text>
   <line x1="278" y1="68" x2="278" y2="142" class="grid"/>
-  <text x="308" y="98" class="value">92</text>
+  <text x="308" y="98" class="value">103</text>
   <text x="308" y="124" class="small">crates.io downloads in 2026</text>
   <line x1="528" y1="68" x2="528" y2="142" class="grid"/>
   <text x="558" y="98" class="value">18</text>
@@ -23,11 +23,11 @@
   <text x="55" y="210" class="value">9</text>
   <text x="55" y="236" class="small">npm packages</text>
   <circle cx="288" cy="203" r="5" fill="#58a6ff"/>
-  <text x="305" y="210" class="value">2</text>
+  <text x="305" y="210" class="value">3</text>
   <text x="305" y="236" class="small">crates.io crates</text>
   <circle cx="538" cy="203" r="5" fill="#58a6ff"/>
   <text x="555" y="210" class="value">1</text>
   <text x="555" y="236" class="small">Maven Central artifacts</text>
   <text x="28" y="270" class="small">Registry downloads are requests, not unique users.</text>
-  <text x="28" y="301" class="small">Data through 2026-10-30</text>
+  <text x="28" y="301" class="small">Data through 2026-11-03</text>
 </svg>
