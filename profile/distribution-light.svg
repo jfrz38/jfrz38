@@ -10,7 +10,7 @@
   </style>
   <rect x="1" y="1" width="788" height="328" rx="12" fill="#ffffff" stroke="#d0d7de"/>
   <text x="28" y="42" class="title">Open-source footprint</text>
-  <text x="28" y="98" class="value">8.1k</text>
+  <text x="28" y="98" class="value">8.5k</text>
   <text x="28" y="124" class="small">npm downloads in 2026</text>
   <line x1="278" y1="68" x2="278" y2="142" class="grid"/>
   <text x="308" y="98" class="value">120</text>
@@ -20,7 +20,7 @@
   <text x="558" y="124" class="small">VS Code installs</text>
   <line x1="28" y1="160" x2="762" y2="160" class="grid"/>
   <circle cx="38" cy="203" r="5" fill="#0969da"/>
-  <text x="55" y="210" class="value">9</text>
+  <text x="55" y="210" class="value">10</text>
   <text x="55" y="236" class="small">npm packages</text>
   <circle cx="288" cy="203" r="5" fill="#0969da"/>
   <text x="305" y="210" class="value">3</text>
@@ -29,5 +29,5 @@
   <text x="555" y="210" class="value">1</text>
   <text x="555" y="236" class="small">Maven Central artifacts</text>
   <text x="28" y="270" class="small">Registry downloads are requests, not unique users.</text>
-  <text x="28" y="301" class="small">Data through 2026-11-06</text>
+  <text x="28" y="301" class="small">Data through 2026-11-08</text>
 </svg>

@@ -19,6 +19,8 @@ import xml.etree.ElementTree as ET
 
 
 USER_AGENT = "jfrz38-profile-metrics/1.0 (+https://github.com/jfrz38/jfrz38)"
+SCHEMA_VERSION = 2
+INCREMENTAL_OVERLAP_DAYS = 7
 
 
 def read_response(request: urllib.request.Request) -> bytes:
@@ -222,6 +224,41 @@ def compact_number(value: int) -> str:
     return str(value)
 
 
+def sparse_daily(daily: dict[str, int]) -> dict[str, int]:
+    """Return sorted download history without zero-value rows."""
+    return dict(sorted((day, value) for day, value in daily.items() if value > 0))
+
+
+def aggregate_daily(packages: dict[str, Any]) -> dict[str, int]:
+    """Aggregate sparse package histories into a sparse registry history."""
+    days = sorted({day for package in packages.values() for day in package.get("daily", {})})
+    return {
+        day: total
+        for day in days
+        if (total := sum(package.get("daily", {}).get(day, 0) for package in packages.values())) > 0
+    }
+
+
+def registry_daily(registry: dict[str, Any]) -> dict[str, int]:
+    """Read v2 package history while remaining compatible with v1 snapshots."""
+    packages = registry.get("packages")
+    if isinstance(packages, dict):
+        return aggregate_daily(packages)
+    return sparse_daily(registry.get("daily_totals", {}))
+
+
+def incremental_start(
+    start: dt.date,
+    today: dt.date,
+    previous_as_of: dt.date | None,
+    has_previous_package: bool,
+) -> dt.date:
+    if previous_as_of is None or not has_previous_package:
+        return start
+    overlap_start = previous_as_of - dt.timedelta(days=INCREMENTAL_OVERLAP_DAYS - 1)
+    return max(start, min(today, overlap_start))
+
+
 def svg_shell(width: int, height: int, content: str, *, dark: bool, title: str) -> str:
     background = "#0d1117" if dark else "#ffffff"
     border = "#30363d" if dark else "#d0d7de"
@@ -291,8 +328,8 @@ def render_activity(snapshot: dict[str, Any], *, dark: bool) -> str:
     as_of = dt.date.fromisoformat(snapshot["as_of"])
     npm = snapshot["npm"]
     crates_io = snapshot["crates_io"]
-    npm_months = monthly_totals(npm["daily_totals"], as_of)
-    crate_months = monthly_totals(crates_io["daily_totals"], as_of)
+    npm_months = monthly_totals(registry_daily(npm), as_of)
+    crate_months = monthly_totals(registry_daily(crates_io), as_of)
     npm_accent = "#f05b5a" if dark else "#cb3837"
     crate_accent = "#f0883e" if dark else "#bc4c00"
 
@@ -364,6 +401,11 @@ def collect(config: dict[str, Any], previous: dict[str, Any], today: dt.date) ->
     start = today - dt.timedelta(days=history_days - 1)
     cutoff = start.isoformat()
     previous_packages = previous.get("npm", {}).get("packages", {})
+    previous_as_of_value = previous.get("as_of")
+    try:
+        previous_as_of = dt.date.fromisoformat(previous_as_of_value) if previous_as_of_value else None
+    except (TypeError, ValueError):
+        previous_as_of = None
     packages: dict[str, Any] = {}
 
     npm_sources = [source for source in config["sources"] if source["type"] == "npm"]
@@ -380,7 +422,9 @@ def collect(config: dict[str, Any], previous: dict[str, Any], today: dt.date) ->
         if published_on and published_on > today.isoformat():
             incoming = {}
         else:
-            query_start = max(start, dt.date.fromisoformat(published_on)) if published_on else start
+            query_start = incremental_start(start, today, previous_as_of, package in previous_packages)
+            if published_on:
+                query_start = max(query_start, dt.date.fromisoformat(published_on))
             incoming = fetch_npm_daily(package, query_start, today)
         old_daily = previous_packages.get(package, {}).get("daily", {})
         merged = {
@@ -389,6 +433,7 @@ def collect(config: dict[str, Any], previous: dict[str, Any], today: dt.date) ->
             if cutoff <= day <= today.isoformat()
         }
         merged.update(incoming)
+        merged = sparse_daily(merged)
         packages[package] = {
             "label": source["label"],
             "product": source["product"],
@@ -416,7 +461,9 @@ def collect(config: dict[str, Any], previous: dict[str, Any], today: dt.date) ->
         if published_on and published_on > today.isoformat():
             incoming = {}
         else:
-            query_start = max(start, dt.date.fromisoformat(published_on)) if published_on else start
+            query_start = incremental_start(start, today, previous_as_of, crate in previous_crates)
+            if published_on:
+                query_start = max(query_start, dt.date.fromisoformat(published_on))
             incoming = fetch_crate_daily(crate, query_start, today)
         old_daily = previous_crates.get(crate, {}).get("daily", {})
         merged = {
@@ -425,6 +472,7 @@ def collect(config: dict[str, Any], previous: dict[str, Any], today: dt.date) ->
             if cutoff <= day <= today.isoformat()
         }
         merged.update(incoming)
+        merged = sparse_daily(merged)
         crate_packages[crate] = {
             "label": source["label"],
             "product": source["product"],
@@ -443,19 +491,9 @@ def collect(config: dict[str, Any], previous: dict[str, Any], today: dt.date) ->
             item = fetch_maven(source)
             maven_items.append(item)
 
-    all_days = sorted({day for package in packages.values() for day in package["daily"]})
-    daily_totals = {
-        day: sum(package["daily"].get(day, 0) for package in packages.values())
-        for day in all_days
-    }
-    all_crate_days = sorted({day for package in crate_packages.values() for day in package["daily"]})
-    crate_daily_totals = {
-        day: sum(package["daily"].get(day, 0) for package in crate_packages.values())
-        for day in all_crate_days
-    }
+    daily_totals = aggregate_daily(packages)
+    crate_daily_totals = aggregate_daily(crate_packages)
     last_30_start = (today - dt.timedelta(days=29)).isoformat()
-    previous_30_start = (today - dt.timedelta(days=59)).isoformat()
-    previous_30_end = (today - dt.timedelta(days=30)).isoformat()
     year_start = dt.date(today.year, 1, 1).isoformat()
 
     def package_total(package: dict[str, Any], start_day: str, end_day: str) -> int:
@@ -474,16 +512,13 @@ def collect(config: dict[str, Any], previous: dict[str, Any], today: dt.date) ->
     )[:3]
 
     return {
+        "schema_version": SCHEMA_VERSION,
         "as_of": today.isoformat(),
         "npm": {
             "maintainer": config["npm_maintainer"],
             "package_count": len(packages),
             "downloads_ytd": sum(value for day, value in daily_totals.items() if day >= year_start),
             "downloads_30d": sum(value for day, value in daily_totals.items() if day >= last_30_start),
-            "downloads_previous_30d": sum(
-                value for day, value in daily_totals.items() if previous_30_start <= day <= previous_30_end
-            ),
-            "daily_totals": daily_totals,
             "top_packages_30d": top,
             "packages": packages,
             "unconfigured_packages": unconfigured,
@@ -494,7 +529,6 @@ def collect(config: dict[str, Any], previous: dict[str, Any], today: dt.date) ->
             "downloads_total": sum(package["downloads_total"] for package in crate_packages.values()),
             "downloads_ytd": sum(value for day, value in crate_daily_totals.items() if day >= year_start),
             "downloads_30d": sum(value for day, value in crate_daily_totals.items() if day >= last_30_start),
-            "daily_totals": crate_daily_totals,
             "packages": crate_packages,
             "unconfigured_packages": unconfigured_crates,
         },

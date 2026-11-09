@@ -1,5 +1,6 @@
 {
   "as_of": "2026-08-19",
+  "schema_version": 2,
   "channels": {
     "maven": {
       "artifact_count": 1
@@ -11,26 +12,33 @@
   },
   "crates_io": {
     "crate_count": 2,
-    "daily_totals": {
-      "2026-08-17": 3,
-      "2026-08-18": 5,
-      "2026-08-19": 4
-    },
     "downloads_30d": 12,
     "downloads_total": 24,
-    "downloads_ytd": 24
+    "downloads_ytd": 24,
+    "packages": {
+      "example-crate": {
+        "daily": {
+          "2026-08-17": 3,
+          "2026-08-18": 5,
+          "2026-08-19": 4
+        }
+      }
+    }
   },
   "npm": {
-    "daily_totals": {
-      "2026-08-16": 2,
-      "2026-08-17": 4,
-      "2026-08-18": 8,
-      "2026-08-19": 6
-    },
     "downloads_30d": 20,
-    "downloads_previous_30d": 10,
     "downloads_ytd": 4729,
     "package_count": 8,
+    "packages": {
+      "@scope/example": {
+        "daily": {
+          "2026-08-16": 2,
+          "2026-08-17": 4,
+          "2026-08-18": 8,
+          "2026-08-19": 6
+        }
+      }
+    },
     "top_packages_30d": [
       {
         "downloads": 9,
