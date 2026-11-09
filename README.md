@@ -15,46 +15,69 @@ I work with coding agents as part of my day-to-day development workflow, mainly 
 
 ## Core stack
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white) ![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white) ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white) ![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![gRPC](https://img.shields.io/badge/gRPC-244C5A?style=flat-square&logo=grpc&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white) ![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white) ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white) ![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
-Also working with Python, GitHub Actions, Prometheus, Grafana, Terraform, Kubernetes and Cloudflare. Still trying to find excuses to build things in Go.
+Also working with Python, MongoDB, gRPC, GitHub Actions, Prometheus, Grafana, Terraform, Kubernetes and Cloudflare. Still trying to find excuses to build things in Go.
 
 *Small tools, disproportionate joy: jq, regex and automating the repetitive bits.*
 
-## Projects
+## Featured projects
 
-### Backend libraries
+- **[Adaptive Admission Controller](https://github.com/jfrz38/adaptive-admission-controller)** — The Rust core for priority-aware load shedding and adaptive concurrency, controlled by a deterministic PID state machine.<br>
+  `Rust` · `WebAssembly` · [crates.io](https://crates.io/crates/adaptive-admission-core) · [docs.rs](https://docs.rs/adaptive-admission-core)<br><br>
+- **[NestJS OpenAPI Wrapper](https://github.com/jfrz38/nestjs-openapi-generator-wrapper)** — Opinionated NestJS structures and templates on top of OpenAPI Generator.<br>
+  `TypeScript` · `NestJS` · `OpenAPI` · [npm](https://www.npmjs.com/package/@jfrz38/nestjs-open-api-generator-wrapper)<br><br>
+- **[Clean Architecture Highlighter](https://github.com/jfrz38/clean-architecture-highlighter)** — Architecture dependency rules in the editor, linter and command line.<br>
+  `TypeScript` · `VS Code` · `ESLint` · [Marketplace](https://marketplace.visualstudio.com/items?itemName=jfrz38.clean-architecture-highlighter)<br><br>
+- **[cocommit](https://github.com/jfrz38/cocommit)** — A keyboard-driven terminal UI for building Conventional Commits.<br>
+  `Rust` · `ratatui` · `Git` · [crates.io](https://crates.io/crates/cocommit)<br><br>
+- **[OpenCode Copy Last](https://github.com/jfrz38/opencode-copy-last)** — Copies the latest response or exchange without leaving the terminal.<br>
+  `TypeScript` · `OpenCode` · [npm](https://www.npmjs.com/package/@jfrz38/opencode-copy-last)
 
-- **[Adaptive Admission Controller](https://github.com/jfrz38/adaptive-admission-controller)** · `Rust` `WebAssembly` `PID` · The Rust evolution of PID Rate Limiter: priority-aware load shedding, adaptive concurrency and PID-controlled admission in a deterministic state machine. [crates.io](https://crates.io/crates/adaptive-admission-core) · [docs.rs](https://docs.rs/adaptive-admission-core)
-- **[PID Rate Limiter](https://github.com/jfrz38/rate-limit-pid-controller)** · `TypeScript` `Express` `NestJS` · Adaptive rate limiting driven by a PID feedback loop, inspired by [Uber's Cinnamon](https://www.uber.com/en-ES/blog/cinnamon-using-century-old-tech-to-build-a-mean-load-shedder/). [core](https://www.npmjs.com/package/@jfrz38/pid-controller-core) · [Express](https://www.npmjs.com/package/@jfrz38/pid-controller-express) · [NestJS](https://www.npmjs.com/package/@jfrz38/pid-controller-nestjs)
-- **[NestJS Cache Proxy](https://github.com/jfrz38/nestjs-cache-proxy)** · `TypeScript` `NestJS` `cache-manager` · Transparent, declarative caching for NestJS providers without changing how consumers use them. [npm](https://www.npmjs.com/package/@jfrz38/nestjs-cache-proxy)
-- **[mockguard](https://github.com/jfrz38/mockguard)** · `Kotlin` `JUnit 5` `Mockito` · Strict mock validation that detects interactions left unverified. [Maven Central](https://central.sonatype.com/artifact/io.github.jfrz38/mockguard)
-- **[NestJS OpenAPI Wrapper](https://github.com/jfrz38/nestjs-openapi-generator-wrapper)** · `TypeScript` `NestJS` `OpenAPI` · Opinionated NestJS structures and templates on top of OpenAPI Generator. [npm](https://www.npmjs.com/package/@jfrz38/nestjs-open-api-generator-wrapper)
+## More projects
 
-### Systems & cloud
+<details>
+<summary><strong>🧱 Backend libraries & adapters</strong></summary>
 
-- **[EdgeFlags](https://github.com/jfrz38/edgeflags)** · `TypeScript` `Cloudflare Workers` `Terraform` · An experimental edge-native feature flag service with authentication, scope-based authorization, KV storage, infrastructure as code and automated delivery.
+- **[PID Rate Limiter](https://github.com/jfrz38/rate-limit-pid-controller)** — Node.js adapter for Adaptive Admission Controller, with Express and NestJS integrations. [npm packages](https://www.npmjs.com/search?q=%40jfrz38%2Fpid-controller)
+- **[NestJS Cache Proxy](https://github.com/jfrz38/nestjs-cache-proxy)** — Transparent, declarative caching for NestJS providers. [npm](https://www.npmjs.com/package/@jfrz38/nestjs-cache-proxy)
+- **[mockguard](https://github.com/jfrz38/mockguard)** — Strict Mockito validation that detects interactions left unverified. [Maven Central](https://central.sonatype.com/artifact/io.github.jfrz38/mockguard)
 
-### Developer tooling & automation
+</details>
 
-- **[Clean Architecture Highlighter](https://github.com/jfrz38/clean-architecture-highlighter)** · `TypeScript` `VS Code` `ESLint` · Architecture dependency rules in the editor, linter and command line. [CLI](https://www.npmjs.com/package/@jfrz38/clean-architecture-highlighter-cli) · [ESLint](https://www.npmjs.com/package/@jfrz38/eslint-plugin-clean-architecture-highlighter) · [VS Code](https://marketplace.visualstudio.com/items?itemName=jfrz38.clean-architecture-highlighter)
-- **[check-version-change](https://github.com/jfrz38/check-version-change)** · `TypeScript` `GitHub Actions` · Detects version changes across npm, PyPI, Maven, crates.io, Go modules and Git refs. [Marketplace](https://github.com/marketplace/actions/check-version-change)
-- **[verify-release-tag](https://github.com/jfrz38/verify-release-tag)** · `TypeScript` `GitHub Actions` `Git` · Read-only validation that a release tag matches a JSON manifest version and, optionally, the expected commit. [Marketplace](https://github.com/marketplace/actions/verify-release-tag)
-- **[auto-version-bump-action](https://github.com/jfrz38/auto-version-bump-action)** · `TypeScript` `GitHub Actions` · Reusable SemVer bumps for Gradle, npm and custom project files. [Marketplace](https://github.com/marketplace/actions/auto-version-bump-action)
-- **[cocommit](https://github.com/jfrz38/cocommit)** · `Rust` `ratatui` `Git` · A keyboard-driven TUI for building Conventional Commits. [crates.io](https://crates.io/crates/cocommit)
+<details>
+<summary><strong>☁️ Systems & cloud</strong></summary>
 
-### OpenCode workflow
+- **[EdgeFlags](https://github.com/jfrz38/edgeflags)** — An experimental edge-native feature flag service with authentication, scoped authorization and automated delivery.
 
-- **[OpenCode Copy Last](https://github.com/jfrz38/opencode-copy-last)** · `TypeScript` `OpenCode` · Copies the latest response or exchange without leaving the terminal. [npm](https://www.npmjs.com/package/@jfrz38/opencode-copy-last)
-- **[OpenCode Wololo Notifications](https://github.com/jfrz38/opencode-wololo-notifications)** · `TypeScript` `OpenCode` · Configurable Age of Empires II sounds for agent events. [npm](https://www.npmjs.com/package/@jfrz38/opencode-wololo-notifications)
+</details>
 
-### Experiments & side quests
+<details>
+<summary><strong>🛠️ Developer tooling & automation</strong></summary>
 
-- **[smart-world-map](https://github.com/jfrz38/smart-world-map)** · `Python` `Rust` `Arduino` · A physical LED map following the ISS, nearby flights and earthquakes.
-- **[worldhunt](https://github.com/jfrz38/worldhunt)** · `Rust` `ratatui` · An offline hot-and-cold country guessing game for the terminal. [crates.io](https://crates.io/crates/worldhunt)
-- **[wololang](https://github.com/jfrz38/wololang)** · `TypeScript` `esolang` · An esoteric language built from Age of Empires II taunts. Yes, `wololo` is valid syntax.
-- **[bash-http-lab](https://github.com/jfrz38/bash-http-lab)** · `Bash` `HTTP` `OpenAPI` · A small HTTP/1.1 server built in plain Bash to explore routing, validation, middleware and persistence behind web frameworks.
-- **[rocket-api-test](https://github.com/jfrz38/rocket-api-test)** · `Rust` `Rocket` · A deliberately small API exploring layered design, dependency inversion and value objects.
+- **[check-version-change](https://github.com/jfrz38/check-version-change)** — Detects version changes across npm, PyPI, Maven, crates.io, Go modules and Git refs. [Marketplace](https://github.com/marketplace/actions/check-version-change)
+- **[verify-release-tag](https://github.com/jfrz38/verify-release-tag)** — Validates that a release tag matches a manifest version and expected commit. [Marketplace](https://github.com/marketplace/actions/verify-release-tag)
+- **[auto-version-bump-action](https://github.com/jfrz38/auto-version-bump-action)** — Reusable SemVer bumps for Gradle, npm and custom project files. [Marketplace](https://github.com/marketplace/actions/auto-version-bump-action)
+
+</details>
+
+<details>
+<summary><strong>🤖 OpenCode workflow</strong></summary>
+
+- **[OpenCode Wololo Notifications](https://github.com/jfrz38/opencode-wololo-notifications)** — Configurable Age of Empires II sounds for agent events. [npm](https://www.npmjs.com/package/@jfrz38/opencode-wololo-notifications)
+
+</details>
+
+<details>
+<summary><strong>🧪 Experiments & side quests</strong></summary>
+
+- **[smart-world-map](https://github.com/jfrz38/smart-world-map)** — A physical LED map following the ISS, nearby flights and earthquakes.
+- **[worldhunt](https://github.com/jfrz38/worldhunt)** — An offline hot-and-cold country guessing game for the terminal. [crates.io](https://crates.io/crates/worldhunt)
+- **[wololang](https://github.com/jfrz38/wololang)** — An esoteric language built from Age of Empires II taunts. Yes, `wololo` is valid syntax.
+- **[bash-http-lab](https://github.com/jfrz38/bash-http-lab)** — An HTTP/1.1 server built in plain Bash to explore what web frameworks hide.
+- **[rocket-api-test](https://github.com/jfrz38/rocket-api-test)** — A small Rust API exploring layered design, dependency inversion and value objects.
+
+</details>
 
 [Browse all repositories →](https://github.com/jfrz38?tab=repositories)
 
@@ -86,15 +109,12 @@ Registry requests are not unique users, but they are a useful pulse of where the
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./profile/stats-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="./profile/stats-light.svg">
-    <img alt="GitHub stats" src="./profile/stats-light.svg" width="467">
+    <img alt="GitHub stats" src="./profile/stats-light.svg" height="165">
   </picture>
-</p>
-
-<p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./profile/top-langs-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="./profile/top-langs-light.svg">
-    <img alt="Most used languages" src="./profile/top-langs-light.svg" width="300">
+    <img alt="Most used languages" src="./profile/top-langs-light.svg" height="165">
   </picture>
 </p>
 

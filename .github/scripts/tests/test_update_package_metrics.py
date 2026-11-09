@@ -33,6 +33,41 @@ class FormattingTests(unittest.TestCase):
         self.assertEqual(len(totals), 12)
         self.assertEqual(totals[-2:], [("2026-07", 2), ("2026-08", 7)])
 
+    def test_sparse_daily_removes_zero_values(self):
+        self.assertEqual(
+            metrics.sparse_daily({"2026-08-17": 0, "2026-08-18": 4}),
+            {"2026-08-18": 4},
+        )
+
+    def test_registry_daily_aggregates_package_histories(self):
+        registry = {
+            "packages": {
+                "one": {"daily": {"2026-08-18": 2}},
+                "two": {"daily": {"2026-08-18": 3, "2026-08-19": 4}},
+            }
+        }
+
+        self.assertEqual(
+            metrics.registry_daily(registry),
+            {"2026-08-18": 5, "2026-08-19": 4},
+        )
+
+    def test_registry_daily_accepts_legacy_totals(self):
+        registry = {"daily_totals": {"2026-08-18": 0, "2026-08-19": 4}}
+
+        self.assertEqual(metrics.registry_daily(registry), {"2026-08-19": 4})
+
+    def test_incremental_start_overlaps_previous_snapshot(self):
+        self.assertEqual(
+            metrics.incremental_start(
+                dt.date(2025, 7, 16),
+                dt.date(2026, 8, 20),
+                dt.date(2026, 8, 19),
+                True,
+            ),
+            dt.date(2026, 8, 13),
+        )
+
     def test_new_npm_package_can_lack_download_history(self):
         response_error = urllib.error.HTTPError(
             "https://example.test",
@@ -73,6 +108,8 @@ class FormattingTests(unittest.TestCase):
         self.assertEqual(sorted(labels, key=distribution.index), labels)
         self.assertEqual(activity.count('aria-hidden="true"'), 2)
         self.assertIn("independent scale per registry", activity)
+        self.assertNotIn("vs previous 30d", activity)
+        self.assertNotIn("/month", activity)
 
     def test_crate_downloads_aggregate_versions_and_filter_dates(self):
         payload = {
@@ -141,6 +178,8 @@ class CollectionTests(unittest.TestCase):
         self.assertEqual(daily, {"2026-08-17": 3, "2026-08-18": 4, "2026-08-19": 5})
         self.assertEqual(snapshot["npm"]["downloads_30d"], 12)
         self.assertEqual(snapshot["npm"]["top_packages_30d"][0]["label"], "Example")
+        self.assertEqual(snapshot["schema_version"], 2)
+        self.assertNotIn("daily_totals", snapshot["npm"])
 
     def test_collection_skips_history_before_package_was_published(self):
         config = {
@@ -215,6 +254,55 @@ class CollectionTests(unittest.TestCase):
         self.assertEqual(snapshot["crates_io"]["downloads_30d"], 7)
         self.assertEqual(snapshot["crates_io"]["downloads_total"], 20)
         self.assertEqual(snapshot["crates_io"]["crate_count"], 1)
+
+    def test_collection_uses_incremental_overlap_and_removes_zero_rows(self):
+        config = {
+            "npm_maintainer": "owner",
+            "history_days": 400,
+            "sources": [
+                {
+                    "id": "example",
+                    "product": "example",
+                    "label": "npm",
+                    "type": "npm",
+                    "package": "@scope/example",
+                }
+            ],
+        }
+        previous = {
+            "as_of": "2026-08-19",
+            "npm": {
+                "packages": {
+                    "@scope/example": {
+                        "daily": {"2026-08-12": 2, "2026-08-13": 0}
+                    }
+                }
+            },
+        }
+        with (
+            mock.patch.object(metrics, "discover_npm_packages", return_value={"@scope/example"}),
+            mock.patch.object(
+                metrics,
+                "fetch_npm_version",
+                return_value={"version": "1.0.0", "url": "https://example.test"},
+            ),
+            mock.patch.object(
+                metrics,
+                "fetch_npm_daily",
+                return_value={"2026-08-13": 0, "2026-08-20": 3},
+            ) as npm_daily,
+        ):
+            snapshot = metrics.collect(config, previous, dt.date(2026, 8, 20))
+
+        npm_daily.assert_called_once_with(
+            "@scope/example",
+            dt.date(2026, 8, 13),
+            dt.date(2026, 8, 20),
+        )
+        self.assertEqual(
+            snapshot["npm"]["packages"]["@scope/example"]["daily"],
+            {"2026-08-12": 2, "2026-08-20": 3},
+        )
 
 
 if __name__ == "__main__":
