@@ -59,6 +59,14 @@
       "package": "@jfrz38/pid-controller-nestjs"
     },
     {
+      "id": "pid-fastify",
+      "product": "pid-rate-limiter",
+      "label": "Fastify",
+      "metrics_label": "PID Fastify",
+      "type": "npm",
+      "package": "@jfrz38/pid-controller-fastify"
+    },
+    {
       "id": "nestjs-cache-proxy",
       "product": "nestjs-cache-proxy",
       "label": "npm",
@@ -81,6 +89,14 @@
       "metrics_label": "Copy Last",
       "type": "npm",
       "package": "@jfrz38/opencode-copy-last"
+    },
+    {
+      "id": "opencode-hover-preview",
+      "product": "opencode-hover-preview",
+      "label": "npm",
+      "metrics_label": "Hover Preview",
+      "type": "npm",
+      "package": "@jfrz38/opencode-hover-preview"
     },
     {
       "id": "opencode-wololo-notifications",
