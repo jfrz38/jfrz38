@@ -39,7 +39,7 @@ Also working with Python, MongoDB, gRPC, GitHub Actions, Prometheus, Grafana, Te
 <details>
 <summary><strong>🧱 Backend libraries & adapters</strong></summary>
 
-- **[PID Rate Limiter](https://github.com/jfrz38/rate-limit-pid-controller)** — Node.js adapter for Adaptive Admission Controller, with Express and NestJS integrations. [npm packages](https://www.npmjs.com/search?q=%40jfrz38%2Fpid-controller)
+- **[PID Rate Limiter](https://github.com/jfrz38/rate-limit-pid-controller)** — Node.js adapter for Adaptive Admission Controller, with Express, NestJS and Fastify integrations. [npm packages](https://www.npmjs.com/search?q=%40jfrz38%2Fpid-controller)
 - **[NestJS Cache Proxy](https://github.com/jfrz38/nestjs-cache-proxy)** — Transparent, declarative caching for NestJS providers. [npm](https://www.npmjs.com/package/@jfrz38/nestjs-cache-proxy)
 - **[mockguard](https://github.com/jfrz38/mockguard)** — Strict Mockito validation that detects interactions left unverified. [Maven Central](https://central.sonatype.com/artifact/io.github.jfrz38/mockguard)
 
@@ -64,7 +64,8 @@ Also working with Python, MongoDB, gRPC, GitHub Actions, Prometheus, Grafana, Te
 <details>
 <summary><strong>🤖 OpenCode workflow</strong></summary>
 
-- **[OpenCode Wololo Notifications](https://github.com/jfrz38/opencode-wololo-notifications)** — Configurable Age of Empires II sounds for agent events. [npm](https://www.npmjs.com/package/@jfrz38/opencode-wololo-notifications)
+- **[OpenCode Hover Preview](https://github.com/jfrz38/opencode-hover-preview)** — Previews links, workspace files, and images on hover in the TUI. [npm](https://www.npmjs.com/package/@jfrz38/opencode-hover-preview)
+- **[OpenCode Wololo Notifications](https://github.com/jfrz38/opencode-wololo-notifications)** — Configurable Age of Empires II sounds for agent events. _(deprecated)_ [npm](https://www.npmjs.com/package/@jfrz38/opencode-wololo-notifications)
 
 </details>
 
