@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-17",
+  "as_of": "2026-11-20",
   "channels": {
     "maven": {
       "artifact_count": 1
@@ -11,9 +11,9 @@
   },
   "crates_io": {
     "crate_count": 3,
-    "downloads_30d": 67,
-    "downloads_total": 132,
-    "downloads_ytd": 132,
+    "downloads_30d": 71,
+    "downloads_total": 136,
+    "downloads_ytd": 136,
     "owner_id": 439611,
     "packages": {
       "adaptive-admission-core": {
@@ -22,9 +22,10 @@
           "2026-11-03": 3,
           "2026-11-04": 7,
           "2026-11-05": 10,
-          "2026-11-14": 5
+          "2026-11-14": 5,
+          "2026-11-19": 3
         },
-        "downloads_total": 33,
+        "downloads_total": 36,
         "label": "crates.io",
         "product": "adaptive-admission-controller",
         "version": "0.1.0"
@@ -47,9 +48,10 @@
           "2026-10-24": 1,
           "2026-10-25": 10,
           "2026-10-27": 1,
-          "2026-11-14": 5
+          "2026-11-14": 5,
+          "2026-11-20": 1
         },
-        "downloads_total": 69,
+        "downloads_total": 70,
         "label": "crates.io",
         "product": "cocommit",
         "version": "0.2.3"
@@ -75,8 +77,8 @@
     "unconfigured_packages": []
   },
   "npm": {
-    "downloads_30d": 1625,
-    "downloads_ytd": 8699,
+    "downloads_30d": 2697,
+    "downloads_ytd": 9771,
     "maintainer": "jfrz38",
     "package_count": 12,
     "packages": {
@@ -90,7 +92,9 @@
           "2026-11-10": 4,
           "2026-11-11": 3,
           "2026-11-12": 6,
-          "2026-11-13": 5
+          "2026-11-13": 5,
+          "2026-11-19": 193,
+          "2026-11-20": 16
         },
         "label": "Node.js",
         "product": "adaptive-admission-controller",
@@ -280,7 +284,9 @@
           "2026-11-14": 2,
           "2026-11-15": 5,
           "2026-11-16": 2,
-          "2026-11-17": 1
+          "2026-11-17": 1,
+          "2026-11-18": 12,
+          "2026-11-19": 8
         },
         "label": "ESLint",
         "product": "clean-architecture-highlighter",
@@ -319,7 +325,9 @@
           "2026-11-06": 2,
           "2026-11-13": 2,
           "2026-11-14": 2,
-          "2026-11-15": 1
+          "2026-11-15": 1,
+          "2026-11-18": 1,
+          "2026-11-19": 2
         },
         "label": "npm",
         "product": "nestjs-cache-proxy",
@@ -327,7 +335,6 @@
       },
       "@jfrz38/nestjs-open-api-generator-wrapper": {
         "daily": {
-          "2025-10-16": 2,
           "2025-10-19": 3,
           "2025-10-24": 2,
           "2025-10-30": 2,
@@ -570,7 +577,10 @@
           "2026-11-14": 4,
           "2026-11-15": 5,
           "2026-11-16": 3,
-          "2026-11-17": 2
+          "2026-11-17": 2,
+          "2026-11-18": 3,
+          "2026-11-19": 1,
+          "2026-11-20": 5
         },
         "label": "npm",
         "product": "nestjs-openapi-wrapper",
@@ -703,14 +713,20 @@
           "2026-11-14": 10,
           "2026-11-15": 3,
           "2026-11-16": 8,
-          "2026-11-17": 4
+          "2026-11-17": 4,
+          "2026-11-18": 5,
+          "2026-11-19": 5,
+          "2026-11-20": 3
         },
         "label": "npm",
         "product": "opencode-copy-last",
         "version": "0.2.0"
       },
       "@jfrz38/opencode-hover-preview": {
-        "daily": {},
+        "daily": {
+          "2026-11-19": 200,
+          "2026-11-20": 16
+        },
         "label": "npm",
         "product": "opencode-hover-preview",
         "version": "0.1.0"
@@ -790,7 +806,10 @@
           "2026-11-14": 8,
           "2026-11-15": 4,
           "2026-11-16": 5,
-          "2026-11-17": 4
+          "2026-11-17": 4,
+          "2026-11-18": 3,
+          "2026-11-19": 60,
+          "2026-11-20": 1
         },
         "label": "npm",
         "product": "opencode-wololo-notifications",
@@ -943,7 +962,9 @@
           "2026-11-13": 3,
           "2026-11-14": 4,
           "2026-11-15": 4,
-          "2026-11-16": 3
+          "2026-11-16": 3,
+          "2026-11-18": 1,
+          "2026-11-20": 5
         },
         "label": "core",
         "product": "pid-rate-limiter",
@@ -1087,14 +1108,19 @@
           "2026-11-10": 2,
           "2026-11-11": 3,
           "2026-11-12": 3,
-          "2026-11-13": 6
+          "2026-11-13": 6,
+          "2026-11-19": 166,
+          "2026-11-20": 12
         },
         "label": "Express",
         "product": "pid-rate-limiter",
         "version": "0.3.0"
       },
       "@jfrz38/pid-controller-fastify": {
-        "daily": {},
+        "daily": {
+          "2026-11-19": 165,
+          "2026-11-20": 17
+        },
         "label": "Fastify",
         "product": "pid-rate-limiter",
         "version": "0.1.0"
@@ -1226,7 +1252,9 @@
           "2026-11-10": 2,
           "2026-11-11": 3,
           "2026-11-12": 3,
-          "2026-11-13": 4
+          "2026-11-13": 4,
+          "2026-11-19": 160,
+          "2026-11-20": 12
         },
         "label": "NestJS",
         "product": "pid-rate-limiter",
@@ -1235,23 +1263,23 @@
     },
     "top_packages_30d": [
       {
-        "downloads": 315,
-        "label": "OpenAPI wrapper",
-        "package": "@jfrz38/nestjs-open-api-generator-wrapper"
-      },
-      {
-        "downloads": 266,
+        "downloads": 475,
         "label": "Admission Node.js",
         "package": "@jfrz38/adaptive-admission-node"
       },
       {
-        "downloads": 249,
+        "downloads": 421,
         "label": "PID NestJS",
         "package": "@jfrz38/pid-controller-nestjs"
+      },
+      {
+        "downloads": 417,
+        "label": "PID Express",
+        "package": "@jfrz38/pid-controller-express"
       }
     ],
     "unconfigured_packages": []
   },
-  "refreshed_on": "2026-11-19",
+  "refreshed_on": "2026-11-22",
   "schema_version": 2
 }
